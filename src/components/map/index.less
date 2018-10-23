@@ -1,0 +1,97 @@
+.map{
+    box-sizing:border-box;
+    width: 100%;
+    height: 100%;
+
+.submap{
+    display:flex;
+    display:-webkit-flex;
+    width:50%;
+    float:left;
+    height: 99%;
+} 
+.v-map{
+    g.v-group-background{
+        pointer-events: none;
+       path{
+            fill:transparent;
+            stroke: #ffffff;
+            stroke-opacity: 0.4;
+        }
+    }
+    //地区样式
+    g.v-item{
+        .v-area{
+            stroke-width: 0.5;
+            stroke: #cccccc;
+            fill:rgba(0,0,0,0.4);
+            filter: url(#shadow-1);
+        }
+        .v-area-l1 {
+            fill: rgba(20, 21, 25, 0.3);
+        }
+        .v-area-l2 {
+            fill: rgba(87, 130, 129, 0.3);
+        }
+        .v-area-l3 {
+            fill: rgba(152, 113, 11, 0.3);
+        }
+        .v-area-l4 {
+            fill: rgba(115, 92, 160, 0.3);
+        }
+        .v-area-l5 {
+            fill: rgba(232, 18, 51, 0.3);
+        }
+        .v-label{
+            fill:rgba(255,255,255,0.3);
+            text-anchor: middle;
+            font-size: 10px;
+        }
+        &:hover{
+            .v-area{
+                fill:#244b93;
+            }
+            .v-label{
+                fill:rgba(255,255,255,0.8);
+            }
+        }
+    }
+    g.v-item-selected{
+        .v-area{
+            stroke-width: 0.5;
+            filter:url(#f-shadow);
+        }
+    }
+    //条形图样式
+    .v-bar{
+        cursor: pointer;
+        fill:url(#f-bar);
+        fill-opacity:0.5;
+        &:hover{
+            fill:url(#f-bar-hover);
+            fill-opacity:0.8;
+        }
+    }
+    //连线样式
+    .v-line{
+        cursor: pointer;
+        stroke-width: 0.4;
+        stroke: url(#f-line);
+        fill: transparent;
+    }
+    .v-line-point{
+        stroke: url(#f-line-point);
+    }
+    //飞线样式
+    .v-fly-line{
+        stroke: url(#f-fly);
+        fill: transparent;
+    }
+    //扩散点样式
+    .v-point{
+        fill: url(#f-point);
+        pointer-events: none;
+    }
+}
+
+}

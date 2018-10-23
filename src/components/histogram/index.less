@@ -1,0 +1,72 @@
+.histogram{
+  width: 100%;
+  height: 100%;
+  .header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    //flex: none;
+    .left{
+      width: -webkit-calc(~"100% - 300px");
+      height: 100%;
+    }
+    .right{
+      margin: 0px;
+      padding: 0px;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+        li{
+        list-style: none;
+        margin-right: 3px;
+        span{
+          
+          margin-right: 3px;  
+        }
+        .green,.yellow,.red{
+          width: 18px;
+          height: 10px;
+          display: inline-block;
+          border-radius: 2px;
+        }
+        .green{
+          background-color: #49A5DD;
+        }
+        .yellow{
+          background-color: #FFA500;
+        }
+        .red{
+          background-color: #E95052;
+        }
+        .greenText,.yellowText,.redText{
+          width: 30px;
+          display: inline-block;
+          text-align: right;
+          vertical-align: top;
+          font-size: 3px;
+        }
+      }
+       li :hover{cursor:pointer}
+    }
+      
+  }
+  .content{
+    width: 100%;
+    height: -webkit-calc(~"100% - 40px");
+    overflow: auto;
+  }
+  .content::-webkit-scrollbar {
+    width: 2px;
+    height: 1px;
+    background-color: transparent;
+  }
+  .content::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color:transparent;
+  }
+}
+
